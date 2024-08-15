@@ -1,0 +1,55 @@
+.grid-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the grid horizontally */
+  justify-content: center; /* Center the grid vertically if needed */
+  margin: 0 auto; /* Center the container */
+}
+
+.grid-row {
+  display: flex;
+}
+
+.grid-cell {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  transition: background-color 0.3s ease;
+}
+
+
+.grid-cell.empty {
+  background-color: white;
+}
+
+.grid-cell.start {
+  background-color: green;
+}
+
+.grid-cell.end {
+  background-color: red;
+}
+
+.grid-cell.obstacle {
+  background-color: black;
+}
+
+.grid-cell.path {
+  background-color: lightblue;
+}
+.grid-cell:hover {
+  border: 2px solid gray;
+}
+
+.tooltip {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 12px;
+  display: none;
+  z-index: 1000;
+}
